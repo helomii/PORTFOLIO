@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="logo">HYJ</div>
+        </div>
+        <div id="container">
+            <div class="main_visual">
+                <div class="mv_fix loading_page">
+                    <ul>
+                        <li class="txt01">Project&nbsp;</li>
+                        <li class="txt02">made by&nbsp;</li>
+                        <li class="txt03">Yeji Hong</li>
+                    </ul>
+                </div>
+                <div class="mv_conts">
+                    Portfolio
+                </div>
+            </div>
+
+            <div class="sub_cont">
+                <h2>My Project</h2>
+                <div class="projects">
+                    <div class="pr_li">
+                        <p><img src="img/portfolio01.jpg" alt=""></p>
+                        <div>
+                            <h3>Round us</h3>
+                            <a href="http://www.roundus.co.kr/">link</a>
+                        </div>
+                    </div>
+                    <div class="pr_li">
+                        <p><img src="img/portfolio04.jpg" alt=""></p>
+                        <div>
+                            <h3>월;하</h3>
+                            <a href="http://impocha.barunweb.co.kr/">link</a>
+                        </div>
+                    </div>
+                    <div class="pr_li">
+                        <p><img src="img/portfolio05.jpg" alt=""></p>
+                        <div>
+                            <h3>나만의 비서</h3>
+                            <a href="http://motivator.barunagency.com/shop/">link</a>
+                        </div>
+                    </div>
+                    <div class="pr_li">
+                        <p><img src="img/portfolio01.jpg" alt=""></p>
+                        <div>
+                            <h3>Round us</h3>
+                            <a href="">link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function(){
+            const rightMotion = gsap.timeline({})
+            rightMotion.addLabel('label')
+            .to('.loading_page ul',{xPercent:-10,delay:1,duration:1},'label')
+            .to('.loading_page .txt01' ,{opacity:0, delay:1}, 'label')
+            .to('.loading_page .txt02' ,{opacity:0, delay:1.3}, 'label')
+            .to('.loading_page .txt03' ,{opacity:0, delay:1.6}, 'label')
+            .to('.loading_page',{yPercent:-100,delay:3,ease: Power4.easeIn},'label')
+            // .fromTo('.mv_conts',{yPercent:100,opacity:0},{yPercent:0,opacity:1,})
+        })
+    </script>
+</body>
+</html>
